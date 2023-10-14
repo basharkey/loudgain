@@ -25,6 +25,7 @@ _**Windows 10 users:** Read [Installation on Windows 10 (Linux bash)](#installat
 - [GETTING STARTED](#getting-started)   
 - [Installation using Homebrew (Mac & Linux)](#installation-using-homebrew-mac-linux)   
 - [Installation on Windows 10 (Linux bash)](#installation-on-windows-10-linux-bash)   
+- [Running as a container](#running-as-a-container)   
 - [DEPENDENCIES](#dependencies)   
 - [BUILDING](#building)   
 - [Mass tagging](#mass-tagging)   
@@ -317,6 +318,25 @@ Then continue with [DEPENDENCIES](#dependencies).
 
 ![loudgain running under Windows 10’s Linux shell](docs/images/loudgain-windows10-bash.png)
 _loudgain running under Windows 10’s Linux shell_
+
+---
+
+## Running as a container
+### Building
+You can either build the image yourself or import from the tar archive
+```
+podman build . -t loudgain:lastest
+```
+Or
+```
+podman load -i loudgain-oci.tar
+```
+
+### Run
+Run [rgbpm](bin/rgbpm) script against `~/Music` dir
+```
+podman run --rm -v ~/Music:/Music loudgain
+```
 
 ---
 
