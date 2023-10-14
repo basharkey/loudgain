@@ -325,7 +325,7 @@ _loudgain running under Windows 10’s Linux shell_
 ### Building
 You can either build the image yourself or import from the tar archive
 ```
-podman build . -t loudgain:lastest
+podman build . -t loudgain:latest
 ```
 Or
 ```
